@@ -1,0 +1,148 @@
+html,
+body {
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+    height: 100%;
+    background: conic-gradient(from 225deg, #a5b7b8, #d2cdc1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mainmenu {
+    display: flex;
+    list-style: none;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #e1f9ff;
+    font-size: 20px;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+input {
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+}
+
+.mainmenu li {
+    transform: scale(1);
+    transition: 0.75s;
+    color: #000;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.mainmenu li a {
+    color: #3c3929;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.mainmenu li:hover {
+    transform: scale(1.15);
+    transition: 0.75s;
+}
+
+.mainmenu li:hover a {
+    transition: 0.75s;
+    font-size: 22px;
+    color: #345054;
+}
+
+form {
+    text-align: left;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    background-color: #c5b6a1;
+    color: #3b3027;
+    border: 2.5px solid #6e6449;
+    padding: 10px;
+}
+
+.form_input {
+    background-color: #a5b7bb;
+    height: 20px;
+    margin: auto 0;
+    color: #6e6449;
+    text-align: center;
+    border: 0px;
+    transition: 0.6s;
+}
+
+.form_input:hover {
+    border: 0px;
+    border-radius: 20px;
+    background-color: #93a29f;
+    transform: scale(1.10);
+    color: #000;
+    transition: 0.6s;
+}
+
+.form_input:focus {
+    border: 0px solid;
+    transform: scale(1.10);
+    transition: 0.6s;
+    border-radius: 20px;
+    background-color: #93a29f;
+    color: #000;
+}
+
+
+/* .form_input:active {
+    border-radius: 20px;
+    transform: scale(1.10);
+    transition: 0.6s;
+    border: 0px solid;
+    background-color: #93a29f;
+    color: #000
+} */
+
+.div_form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.div_form p {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.button_div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_btn {
+    transition: 0.6s;
+    background-color: #a5b7bb;
+    padding: 10px;
+    font-size: 20px;
+    color: #6e6449;
+    border: 0;
+}
+
+.form_btn:hover {
+    /* padding: 5px; */
+    border-radius: 20px;
+    background-color: #93a29f;
+    color: #000;
+    transform: scale(1.15);
+    transition: 0.6s;
+}

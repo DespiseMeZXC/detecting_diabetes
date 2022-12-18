@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block content %} {{ block.super }}
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    table {
+        border: 1px solid black;
+    }
+    
+    th {
+        border: 1px solid black;
+    }
+    
+    .div_info {
+        background: aliceblue;
+        margin: 0 auto;
+        padding: 58px 15px 0;
+        /* text-align: center */
+        width: 796.7px;
+        height: 1126.7px;
+    }
+</style>
+<div>
+    <div class="div_info">
+        <h1 style="text-align: center;font-size: 14px; margin-bottom: 2px;">ГАУЗ "БРЯНСКИЙ КЛИНИКО-ДИОГНОСТИЧЕСКИЙ ЦЕНТР" </h1>
+        <h1 style="text-align: center;margin-top: 0;margin-bottom: 2px;font-size: 14px;">ОТДЕЛЕНИЕ ЭНДОКРИНОЛОГИИ</h1>
+        <h1 style="text-align: center;margin-top: 0;font-size: 14px;">241007, г.Брянск, ул.Бежицкая, 2. тел. 71-51-36</h1>
+        <h1 style="text-align: center;margin-top: 30px;font-size: 18px;">АНАЛИЗ НА ПОЯВЛЕНИЕ ДИАБЕТА В ТЕЧЕНИИ 5 ЛЕТ</h1>
+        <h1 style="margin-top: 30px;font-size: 16px;">Пациент: {{namePat}}, (дата рождения : {{birthDay}}) № амб.карты: {{OutpatientCard}}</h1>
+        <h1 style="margin-top: 5px;font-size: 16px;">Адрес: {{adress}}</h1>
+        <h1 style="margin-top: 5px;font-size: 16px;">Дата исследования: {{dateResearch}}</h1>
+        <h1 style="text-align: center;margin-top: 30px;font-size: 18px;">Результаты анализов и предварительный вердикт</h1>
+        <table style=" margin: 0 auto; width: 500px; ">
+            <tr>
+                <th>Количество беременностей</th>
+                <th>{{Pregnancies}}</th>
+            </tr>
+            <tr>
+                <th>Содержание глюкозы в крови</th>
+                <th>{{Glucose}}</th>
+            </tr>
+            <tr>
+                <th>Кровяное давление</th>
+                <th>{{BloodPressure}}</th>
+            </tr>
+            <tr>
+                <th>Толщина кожи</th>
+                <th>{{SkinThickness}}</th>
+            </tr>
+            <tr>
+                <th>Содержание инсулина в крови</th>
+                <th>{{Insulin}}</th>
+            </tr>
+            <tr>
+                <th>Индекс тела</th>
+                <th>{{BMI}}</th>
+            </tr>
+            <tr>
+                <th>Функция родословного диабета </th>
+                <th>{{DiabetesPedigreeFunction}}</th>
+            </tr>
+            <tr>
+                <th>Возвраст</th>
+                <th>{{Age}}</th>
+            </tr>
+        </table>
+        <h1 style="margin-top: 30px;font-size: 16px;">Заключение: {{result}}</h1>
+        <h1 style="margin-top: 30px;font-size: 18px;">{{title_recomendation}}</h1>
+        <p style="margin-top: 30px;font-size: 18px;">{{recomendation}}</p>
+        <div style=" margin-left: 30%; margin-right: 15px;display: flex; justify-content: space-between;">
+            <p>Врач: ______________________</p>
+            <p>{{nameDoctor}}</p>
+        </div>
+        <h1 style="margin-top: 30px;font-size: 18px;">Данное заключение не является диагнозом. Требуется консультация врача.</h1>
+    </div>
+</div>
+{% endblock %}

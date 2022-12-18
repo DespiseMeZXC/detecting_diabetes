@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %} {{ block.super }}
+
+<form style="height: 425px;" method="POST" action="/detection_diabet">
+    {% csrf_token %}
+    <div class="div_form">
+        <p>Количество беременностей</p>
+        <input name="Pregnancies" class="form_input" pattern="[.0-9]+" type="text" min="0" value="1" required>
+    </div>
+    <div class="div_form">
+        <p>Глюкозы в крови</p>
+        <input name="Glucose" class="form_input" pattern="[.0-9]+" type="text" min="0" value="173" required>
+    </div>
+    <div class="div_form">
+        <p>Давление крови</p>
+        <input name="BloodPressure" class="form_input" pattern="[.0-9]+" type="text" min="0" value="74" required>
+    </div>
+    <div class="div_form">
+        <p>Толщина кожи</p>
+        <input name="SkinThickness" class="form_input" pattern="[.0-9]+" type="text" min="0" value="0" required>
+    </div>
+    <div class="div_form">
+        <p>Инсулина в крови</p>
+        <input name="Insulin" class="form_input" pattern="[.0-9]+" type="text" min="0" value="0" required>
+    </div>
+    <div class="div_form">
+        <p>Индекс массы тела</p>
+        <input name="BMI" class="form_input" pattern="[.0-9]+" type="text" min="0" value="36.8" required>
+    </div>
+    <div class="div_form">
+        <p>Функция родословного диабета</p>
+        <input name="DiabetesPedigreeFunction" class="form_input" pattern="[.0-9]+" type="text" min="0" value="0.088" required>
+    </div>
+    <div class="div_form">
+        <p>Возвраст</p>
+        <input name="Age" class="form_input" pattern="[.0-9]+" type="text" min="0" value="38" required>
+    </div>
+    <div class="button_div">
+        <input class="form_btn" type="reset" value="Очистить форму">
+        <input type="submit" class="form_btn" value="Узнать результат">
+    </div>
+</form>
+
+{% endblock %}

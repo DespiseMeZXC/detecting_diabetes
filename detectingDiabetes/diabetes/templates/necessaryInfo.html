@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %} {{ block.super }}
+<form style="height: 335px;" method="POST" action="/ness">
+    {% csrf_token %}
+    <div class="div_form">
+        <p>Полное ФИО пациента:</p>
+        <input name="fioPatient" class="form_input" type="text" value="Шитый Алексей Дмитриевич" required>
+    </div>
+    <div class="div_form">
+        <p>Дата рождения пациента:</p>
+        <input style="width: 163px;padding: 1px 2px;" name="birthDay" class="form_input" type="date" value="2003-03-15" required>
+    </div>
+    <div class="div_form">
+        <p>№ амбулаторной карты:</p>
+        <input name="numbOutpatientCard" class="form_input" pattern="[.0-9]+" type="text" min="0" value="523512" required>
+    </div>
+    <div class="div_form">
+        <p> Адрес:</p>
+        <input name="adressPatient" class="form_input" type="text" value="г.Брянск, пр. Станке Димитрова 3" required>
+    </div>
+    <div class="div_form">
+        <p>Дата исследования</p>
+        <input style="width: 163px;padding: 1px 2px;" name="dateResearches" class="form_input" type="date" value="2022-12-01" required>
+    </div>
+    <div class="div_form">
+        <p>ФИО врача</p>
+        <input name="fioDoctor" class="form_input" type="text" value="Малышева Елена Васильевна" required>
+    </div>
+    <div class="button_div">
+        <input class="form_btn" type="reset" value="Очистить форму">
+        <input type="submit" class="form_btn" value="Записать информацию">
+    </div>
+</form>
+
+
+
+
+
+
+<!-- <form method="POST" action="/ness">
+    {% csrf_token %}
+    <p><input name="fioPatient" class="form_text" type="text" value="Шитый Алексей Дмитриевич"> Полное ФИО пациента: </p>
+    <p><input name="birthDay" class="form_text" type="date" value="2003-03-15"> Дата рождения пациента: </p>
+    <p><input name="numbOutpatientCard" class="form_text" type="text" value=523512> № амбулаторной карты: </p>
+    <p><input name="adressPatient" class="form_text" type="text" value="г.Брянск, пр. Станке Димитрова 3"> Адрес: </p>
+    <p><input name="dateResearches" class="form_text" type="date" value="2022-12-01"> Дата исследования </p>
+    <p><input name="fioDoctor" class="form_text" type="text" value="Малышева Елена Васильевна"> ФИО врача </p>
+    <input class="form_btn" type="reset" value="Очистить форму">
+    <input class="form_btn" type="submit" value="Занести данные">
+    <h1>{{res}}</h1>
+    </p>
+
+</form> -->
+{% endblock %}
